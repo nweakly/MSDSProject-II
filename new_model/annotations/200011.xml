@@ -1,0 +1,22 @@
+<annotation>
+  <folder>new_data</folder>
+  <filename>200011.png</filename>
+  <segmented>0</segmented>
+  <size>
+    <width>640</width>
+    <height>360</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>crowbar</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>317</xmin>
+      <ymin>115</ymin>
+      <xmax>433</xmax>
+      <ymax>358</ymax>
+    </bndbox>
+  </object>
+</annotation>

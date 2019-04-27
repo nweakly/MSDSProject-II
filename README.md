@@ -7,16 +7,18 @@ The Ring doorbell records video clips when detecting motion within a predetermin
 
 For more detailed explanation of the project please watch: It contains some practical suggestions and lessons learned while working on this project.
 
-## Requirements and Dependences used for the Project:
+## Technical Requirements and Dependencies:
 - Anaconda package (64-bit version) on Windows 10
 - Python 3.6
-- Tensorflow (GPU version is highly advisable)
-- OpenCV- Cython extentions - Python to C compiler and wrapper to be able to call DarkNet C code from Python
+- TensorFlow (GPU version)
+- OpenCV
+- Cython extensions - Python to C compiler and wrapper to be able to call DarkNet C code from Python
 - Jupyter Notebook
-- DarkNet framework - original implementation if the YOLO algorithm wriutten in C and CUDA by Joseph Redmon https://github.com/pjreddie/darknet
+- DarkNet framework - original implementation if the YOLO algorithm written in C and CUDA by Joseph Redmon https://github.com/pjreddie/darknet
 - Darkflow
-- cfg (configuration) and weights files for the YOLO model downloaded from  
+- cfg (configuration) and weights files for the YOLO model downloaded from https://pjreddie.com/darknet/yolo/
 - highly recommended to create a separate conda virtual environment (to resolve version conflicts for the deep learning libraries)
+- GPU GeForce RTX 2070 used during model raining process, GeForce GTX1050 for all other file processing.
 
 For detailed installation instructions please refere to a post by Abhijeet Kumar (https://appliedmachinelearning.blog/2018/05/27/running-yolo-v2-for-real-time-object-detection-on-videos-images-via-darkflow/ ) or 
 

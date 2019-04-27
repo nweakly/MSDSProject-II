@@ -15,7 +15,7 @@ For more detailed explanation of the project please watch: It contains some prac
 - Cython extensions - Python to C compiler and wrapper to be able to call DarkNet C code from Python
 - Jupyter Notebook
 - DarkNet framework - original implementation of the YOLO algorithm written in C and CUDA by Joseph Redmon https://github.com/pjreddie/darknet
-- Darkflow
+- Darkflow - package translating Darknet to TensorFlow
 - cfg (configuration) and weights files for the YOLO model downloaded from https://pjreddie.com/darknet/yolo/
 - highly recommended to create a separate conda virtual environment (to resolve version conflicts for the deep learning libraries) and use Anaconda for installations
 - GPU GeForce RTX 2070 used during model raining process, GeForce GTX1050 for all other file processing.

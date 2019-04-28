@@ -40,7 +40,12 @@ The original video recordings from the Ring device have frame size 1920x1080 pix
 The resulting set of training crowbar images collected from all sources and augmentation techniques applied includes 554 total images.
 
 ### Fitting a pre-trained model
-testing oon still images
+Since the detection speed is a very important factor in processing security videos, among all available CNN approaches  I chose to use a one-stage detector model, namely the YOLO ("You Only look Once") model originally introduced in 2016 in the paper written by Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi.  The updated YOLOv2 algorithm was translated to Tensorflow by Trieu H. Trinh and is available as an open source darkflow package (https://github.com/thtrieu/darkflow). 
+
+
+
+
+esting oon still images
 testing on video
 
 ### Training a New Model on a Custom Data Set
@@ -68,8 +73,10 @@ training is more effective in command-line mode
 Video presentation for this project: 
 - Darklow library (Darknet translated to TensorFlow) https://github.com/thtrieu/darkflow
 - Official site for the Darknet project https://pjreddie.com/darknet/yolo/ . Use to download configuration and pretrained wights files.
-- Jay, Mark. Series of YOLO tutorials: https://www.youtube.com/watch?v=PyjBd7IDYZs&list=PLX-LrBk6h3wSGvuTnxB2Kj358XfctL4BM&index=1 and 
+- Jay, M. Series of YOLO tutorials: https://www.youtube.com/watch?v=PyjBd7IDYZs&list=PLX-LrBk6h3wSGvuTnxB2Kj358XfctL4BM&index=1 and 
 https://github.com/markjay4k/YOLO-series 
 - Instructions for setting up YOLO using Anaconda and Windows https://expschoolwork.blogspot.com/2018/11/using-yolo-in-anaconda.html
+
+Redmon, J., Divvala, S., Girshick, R., Farhadi, A. (2016). You Only Look Once: unified, real-time object detection. Retrieved from:  https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf 
 
 Darknet framework https://github.com/pjreddie/darknet

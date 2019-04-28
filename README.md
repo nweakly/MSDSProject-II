@@ -40,7 +40,7 @@ The original video recordings from the Ring device have frame size 1920x1080 pix
 The resulting set of training crowbar images collected from all sources and augmentation techniques applied includes 554 total images.
 
 ### Fitting a pre-trained model
-Since the detection speed is a very important factor in processing security videos, among all available CNN approaches  I chose to use a one-stage detector model, namely the YOLO ("You Only look Once") model originally introduced in 2016 in the paper written by Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi.  The updated YOLOv2 algorithm was translated to Tensorflow by Trieu H. Trinh and is available as an open source darkflow package (https://github.com/thtrieu/darkflow). 
+Since the detection speed is a very important factor in processing security videos, among all available CNN approaches  I chose to use a one-stage detector model, namely the __YOLO ("You Only look Once") model__ originally introduced in 2016 in the paper written by Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi.  The updated YOLOv2 algorithm was translated to Tensorflow by Trieu H. Trinh and is available as an open source __darkflow package__ (https://github.com/thtrieu/darkflow). 
 
 A test example of YOLOv2 pretrrained model applied to a static image can be found at https://github.com/nweakly/MSDSProject-II/blob/master/YOLO_Model_Test.ipynb which successfully with 68.4% confidence identified a cat in the picture. 
 
@@ -49,6 +49,9 @@ Using YOLOv2 for predictions is easier accomplished through the command line int
 ```
 python flow --model cfg/yolov2.cfg --load bin/yolov2.weights --demo videofile.avi  --gpu 1.0 --saveVideo
 ```
+ (notes:  before running this command, navigate to the darkflow master directory and download the cfg file and the weights file, for example from https://pjreddie.com/darknet/yolo/ maintained by the authors of the YOLO algorithm.  For more options refer to the official darkflow repository instructions https://github.com/thtrieu/darkflow )
+ 
+Applied to the videos (please see mp4 files in Data/Processed folder),  the YOLOv2 and its smaller modification YOLOv2 tiny showed good detection results for large objects in both normal and low light conditions as long as there is an unobstructed view of an object. 
 
 ### Training a New Model on a Custom Data Set
 Transfer learning approach:

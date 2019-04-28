@@ -107,9 +107,24 @@ python flow  --model cfg/yolov2-tiny-1c-4.cfg  --load bin/yolov2-tiny.weights  -
 This command will generate .pb and .meta files that contain all the information necessary to make predictions using the newly trained model( using --pbLoad and --metaLoad instead of the --model and --load parameters in the demo example above).
 
 ### Use  the new model for predictions
+Finally,  I used the newly trained model on previously unseen still images and videos.  Several images from the same folder can be forwarded for predictions at the same time using the following command:
 
+```
+python flow --imgdir new_model/test_pics  --pbLoad built_graph/yolov2-tiny-1c-4.pb --metaLoad built_graph/yolov2-tiny-1c-4.meta  --gpu 1.0 
+```
 
-### Interpretation of the Results
+Notes: 
+- by default, the output images with bounding boxes are saved in a new subfolder out in the same folder ( new_model/test_pics/out );
+- add --json if you would like to generate output json files with the pixel location for each bounding box.
+
+I also tested the model on the videos containing crowbars with some neutral backgrounds and video files from the Ring doorbell.  
+```
+python flow  --pbLoad built_graph/yolov2-tiny-1c-4.pb --metaLoad built_graph/yolov2-tiny-1c-4.meta  --demo new_model/test_video/IMG_0851.MOV --threshold 0.67 --gpu 1.0 --saveVideo
+```
+
+Please see examples of the results in  https://github.com/nweakly/MSDSProject-II/tree/master/new_model/test_video and  https://github.com/nweakly/MSDSProject-II/tree/master/new_model/test_ring_video . 
+
+Note: darkflow also allows using information about different checkpoints generated during training to produce predictions. In many cases it is useful to compare results at the different stages, however, checkpoint files are not included in this repository due to space restrictions.
 
 ## Conclusions
 - YOLOv2 model is not very accurate in predicting smaller objects

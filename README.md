@@ -95,14 +95,14 @@ crowbar
 Next, train the new model by using the following command and referencing the new cfg file, the weights file for the pretrained model and folders for the training images and corresponding annotations:
 
 ```
-python flow  -- model cfg/yolov2-tiny-1c-5.cfg  --load bin/yolov2-tiny.weights --train --annotations new-model/annotations --dataset new_model/new_data --gpu 1.0
+python flow  -- model cfg/yolov2-tiny-1c-4.cfg  --load bin/yolov2-tiny.weights --train --annotations new-model/annotations --dataset new_model/new_data --gpu 1.0
 ```
 note: --gpu 1.0 parameter means that the training will be conducted 100% on GPU 
 
 After training is complete, it is useful to save the graph and weights to protobuf file (.pb):
 
 ```
-python flow  --model cfg/yolov2-tiny-1c-5.cfg  --load bin/yolov2-tiny.weights  --savepb
+python flow  --model cfg/yolov2-tiny-1c-4.cfg  --load bin/yolov2-tiny.weights  --savepb
 ```
 This command will generate .pb and .meta files that contain all the information necessary to make predictions using the newly trained model( using --pbLoad and --metaLoad instead of the --model and --load parameters in the demo example above).
 

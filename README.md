@@ -92,19 +92,19 @@ anchors = 1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52
 crowbar
 ```
 
+Next, train the new model by using the following command and referencing the new cfg file, the weights file for the pretrained model and folders for the training images and corresponding annotations:
 
+```
+python flow  -- model cfg/yolov2-tiny-1c-5.cfg  --load bin/yolov2-tiny.weights --train --annotations new-model/annotations --dataset new_model/new_data --gpu 1.0
+```
+note: --gpu 1.0 parameter means that the training will be conducted 100% on GPU 
 
+After training is complete, it is useful to save the graph and weights to protobuf file (.pb):
 
-Transfer learning approach:
-1. chose a pre-traines model
-2. change configurations to fit a particular situationsUsing YOLOv2 for predictions is easier accomplished through the command line interface, for example using the following command:
-
-
-3. build the model
-4. train the model
-training is more effective in command-line mode
-5. use the new model for predictions
-
+```
+flow  --model cfg/yolov2-tiny-1c-5.cfg  --load bin/yolov2-tiny.weights  --savepb
+```
+This command will generate .pb and .meta files that contain all the information necessary to make predictions using the newly trained model( using --pbLoad and --metaLoad instead of the --model and --load parameters in the demo example above).
 
 ### Use  the new model for predictions
 

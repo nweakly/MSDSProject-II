@@ -70,7 +70,27 @@ num=5
 softmax=1
 ```
 
+- in the second to last [convolutional] layer, set the number of filters to 30 (num*(number of classes+5)=5*(1+5)=30:
 
+```
+
+[convolutional]
+size=1
+stride=1
+pad=1
+filters=30
+activation=linear
+
+[region]
+anchors = 1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52
+
+```
+
+- change the labels.txt file (saved in the darkflow master directory) to reflect the only class we are training for:
+
+```
+crowbar
+```
 
 
 

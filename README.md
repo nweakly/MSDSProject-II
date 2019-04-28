@@ -49,7 +49,7 @@ Using YOLOv2 for predictions is easier accomplished through the command line int
 ```
 python flow --model cfg/yolov2.cfg --load bin/yolov2.weights --demo videofile.avi  --gpu 1.0 --saveVideo
 ```
- (notes:  before running this command, navigate to the darkflow master directory and download the cfg file and the weights file, for example from https://pjreddie.com/darknet/yolo/ maintained by the authors of the YOLO algorithm.  For more options refer to the official darkflow repository instructions https://github.com/thtrieu/darkflow )
+ (notes:  before running this command, navigate to the darkflow master directory and make sure to download the cfg file and the weights file, for example from https://pjreddie.com/darknet/yolo/ maintained by the authors of the YOLO algorithm.  For more options refer to the official darkflow repository instructions https://github.com/thtrieu/darkflow )
  
  ![Ring Doorbell-2]( https://github.com/nweakly/MSDSProject-II/blob/master/Data/scene00376.png "Screen shot of the Ring Doorbell recording")
 

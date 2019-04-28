@@ -26,7 +26,7 @@ For a more detailed explanation of the project please watch the video presentati
 For detailed installation instructions please refere to a post by Abhijeet Kumar (https://appliedmachinelearning.blog/2018/05/27/running-yolo-v2-for-real-time-object-detection-on-videos-images-via-darkflow/ ) or https://expschoolwork.blogspot.com/2018/11/using-yolo-in-anaconda.html .
 
 ## Project steps:
-### Data collection
+### Data collection, EDA and Preprocessing
 For this project, I assembled custom training and testing datasets using the following tools and data sources:
 - video recordings (for testing and extracting still images) from a personal Ring device collected using DataCollection.ipynb ;
 - static images (for training, testing, and presentation) extracted from the video recordings using VLC media player (for instructions see  https://www.raymond.cc/blog/extract-video-frames-to-images-using-vlc-media-player/);
@@ -34,11 +34,10 @@ For this project, I assembled custom training and testing datasets using the fol
 - video files preprocessed using DataPreprocessing.ipynb to decrease the size, discard audio and cut out necessary parts of the video recordings;
 - additional training pictures of a crowbar were taken by the author of the project; 
 - Annotating_images.py and Drawing_Boxes.py scripts were used to manually draw bounding boxes around crowbars (to train a custom model) and create xml files with image annotations; 
-- additional data augmentation techniques were randomly applied to the training data set (rotation, flipping, scaling, translation, color saturation changes, and cropping) using Photoshop.  
+- additional data augmentation techniques were randomly applied to the training data set (rotation, flipping, scaling, translation, color saturation changes, and cropping) using Photoshop batch processing.  
 
-
-### EDA and Data Preprocessing
-resigins etc
+The original video recordings from the Ring device have frame size 1920x1080 pixels with 15 frames per second rate.   In order to accommodate existing hardware better, the videos were downsized to 640x360 pixels while retaining 15.0 frames/second rate. 
+The resulting set of training crowbar images collected from all sources and augmentation techniques applied includes 554 total images.
 
 ### Fitting a pre-trained model
 testing oon still images

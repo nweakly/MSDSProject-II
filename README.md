@@ -42,7 +42,7 @@ The resulting set of training crowbar images collected from all sources and augm
 ### Fitting a pre-trained model
 Since the detection speed is a very important factor in processing security videos, among all available CNN approaches  I chose to use a one-stage detector model, namely the __YOLO ("You Only look Once") model__ originally introduced in 2016 in the paper written by Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi.  The updated YOLOv2 algorithm was translated to Tensorflow by Trieu H. Trinh and is available as an open source __darkflow package__ (https://github.com/thtrieu/darkflow). 
 
-A test example of YOLOv2 pretrrained model applied to a static image can be found at https://github.com/nweakly/MSDSProject-II/blob/master/YOLO_Model_Test.ipynb which successfully with 68.4% confidence identified a cat in the picture. 
+A test example of YOLOv2 pretrained model applied to a static image can be found at https://github.com/nweakly/MSDSProject-II/blob/master/YOLO_Model_Test.ipynb which successfully with 68.4% confidence identified a cat in the picture. 
 
 Using YOLOv2 for predictions is easier accomplished through the command line interface, for example using the following command:
 
@@ -56,6 +56,25 @@ python flow --model cfg/yolov2.cfg --load bin/yolov2.weights --demo videofile.av
 Applied to the videos (please see mp4 files in Data/Processed folder),  the YOLOv2 and its smaller modification YOLOv2 tiny showed good detection results for large objects in both normal and low light conditions as long as there is an unobstructed view of an object.   I was also able to reach 25-26 frames per second while processing videos on GeForce GTX1050  and above 34 frames per second on GPU GeForce RTX 2070, both of which is higher than 15 per second used in the Ring video recordings and is sufficient to process real-time surveyance video. 
 
 ### Training a New Model on a Custom Data Set
+Next, I used the transfer learning approach, or a technique when a machine learning model trained to complete one task is repurposed to accomplished a different related task.  Due to the resource limitations, I chose a modification of the YOLOv2 model called YOLOv2-tiny as the pre-trained basis and changed its last two layers in order to train a new model on a custom dataset of crowbar pictures.
+This required adjustments to the copy of .cfg file created for the new model (keep the original cfg file intact):
+- in the last  [region] layer set the number of layers the model is  training for to 1:
+
+```
+[region]
+anchors = 1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52
+bias_match=1
+classes=1
+coords=4
+num=5
+softmax=1
+```
+
+
+
+
+
+
 Transfer learning approach:
 1. chose a pre-traines model
 2. change configurations to fit a particular situationsUsing YOLOv2 for predictions is easier accomplished through the command line interface, for example using the following command:

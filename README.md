@@ -5,22 +5,22 @@ The goal of this project is to conduct a feasibility study of applying deep lear
 
 The Ring doorbell records video clips when detecting motion within a predetermined perimeter. However, this motion sensor can be triggered not only by humans walking up to the door, but by wild and domestic animals, passing vehicles, etc. So, the first step of this project is using an algorithm capable of processing video feed in real (or near real) time to identify and classify objects, and then training the model to identify additional context-dependent objects in the video recordings (video feed).
 
-For more detailed explanation of the project please watch: It contains some practical suggestions and lessons learned while working on this project.
+For a more detailed explanation of the project please watch the video presentation. It contains a description of the project some practical suggestions and lessons learned while working on this project.
 
 ## Technical Requirements and Dependencies:
 - Anaconda package (64-bit version) on Windows 10
-- Python 3.6
-- TensorFlow (GPU version)
+- Python 3.5 or higher
+- TensorFlow (GPU version preferred)
 - OpenCV
 - Cython extensions - Python to C compiler and wrapper to be able to call DarkNet C code from Python
 - Jupyter Notebook
 - DarkNet framework - original implementation of the YOLO algorithm written in C and CUDA by Joseph Redmon https://github.com/pjreddie/darknet
 - Darkflow - package translating Darknet to TensorFlow
 - cfg (configuration) and weights files for the YOLO model downloaded from https://pjreddie.com/darknet/yolo/
-- highly recommended to create a separate conda virtual environment (to resolve version conflicts for the deep learning libraries) and use Anaconda for installations
+- highly recommended - a separate conda virtual environment (to resolve version conflicts for the deep learning libraries) and use Anaconda for installations
 - GPU GeForce RTX 2070 used during model raining process, GeForce GTX1050 for all other file processing.
 
-For detailed installation instructions please refere to a post by Abhijeet Kumar (https://appliedmachinelearning.blog/2018/05/27/running-yolo-v2-for-real-time-object-detection-on-videos-images-via-darkflow/ ) or 
+For detailed installation instructions please refere to a post by Abhijeet Kumar (https://appliedmachinelearning.blog/2018/05/27/running-yolo-v2-for-real-time-object-detection-on-videos-images-via-darkflow/ ) or https://expschoolwork.blogspot.com/2018/11/using-yolo-in-anaconda.html .
 
 ## Project steps:
 ### Data collection

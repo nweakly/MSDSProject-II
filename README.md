@@ -51,6 +51,8 @@ python flow --model cfg/yolov2.cfg --load bin/yolov2.weights --demo videofile.av
 ```
  (notes:  before running this command, navigate to the darkflow master directory and download the cfg file and the weights file, for example from https://pjreddie.com/darknet/yolo/ maintained by the authors of the YOLO algorithm.  For more options refer to the official darkflow repository instructions https://github.com/thtrieu/darkflow )
  
+ ![Ring Doorbell-2]( https://github.com/nweakly/MSDSProject-II/blob/master/Data/scene00376.png "Screen shot of the Ring Doorbell recording")
+
 Applied to the videos (please see mp4 files in Data/Processed folder),  the YOLOv2 and its smaller modification YOLOv2 tiny showed good detection results for large objects in both normal and low light conditions as long as there is an unobstructed view of an object.   I was also able to reach 25-26 frames per second while processing videos on GeForce GTX1050  and above 34 frames per second on GPU GeForce RTX 2070, both of which is higher than 15 per second used in the Ring video recordings and is sufficient to process real-time surveyance video. 
 
 ### Training a New Model on a Custom Data Set

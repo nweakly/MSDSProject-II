@@ -27,11 +27,15 @@ For detailed installation instructions please refere to a post by Abhijeet Kumar
 
 ## Project steps:
 ### Data collection
+For this project, I assembled custom training and testing datasets using the following tools and data sources:
+- video recordings (for testing and extracting still images) from a personal Ring device collected using DataCollection.ipynb ;
+- static images (for training, testing, and presentation) extracted from the video recordings using VLC media player (for instructions see  https://www.raymond.cc/blog/extract-video-frames-to-images-using-vlc-media-player/);
+- additional training images were scraped using Google image search using Training_data_collection.py script;
+- video files preprocessed using DataPreprocessing.ipynb to decrease the size, discard audio and cut out necessary parts of the video recordings;
+- additional training pictures of a crowbar were taken by the author of the project; 
+- Annotating_images.py and Drawing_Boxes.py scripts were used to manually draw bounding boxes around crowbars (to train a custom model) and create xml files with image annotations; 
+- additional data augmentation techniques were randomly applied to the training data set (rotation, flipping, scaling, translation, color saturation changes, and cropping) using Photoshop.  
 
-scrit to download acual Ring  (test videos)video clips
--scraping
-taking, and annotating pictures
-taking frames out of the actual video clips
 
 ### EDA and Data Preprocessing
 resigins etc

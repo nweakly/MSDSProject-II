@@ -10,7 +10,7 @@ The Ring doorbell records video clips when detecting motion within a predetermin
 
 For a more detailed explanation of the project please watch the video presentation. It contains a description of the project some practical suggestions and lessons learned while working on this project.
 
-## Technical Requirements and Dependencies:
+## Technical Requirements and Dependencies
 - Anaconda package (64-bit version) on Windows 10
 - Python 3.5 or higher
 - TensorFlow (GPU version preferred)
@@ -25,7 +25,7 @@ For a more detailed explanation of the project please watch the video presentati
 
 For detailed installation instructions please refere to a post by Abhijeet Kumar (https://appliedmachinelearning.blog/2018/05/27/running-yolo-v2-for-real-time-object-detection-on-videos-images-via-darkflow/ ) or https://expschoolwork.blogspot.com/2018/11/using-yolo-in-anaconda.html .
 
-## Project steps:
+## Project steps
 ### Data collection, EDA and Preprocessing
 For this project, I assembled custom training and testing datasets using the following tools and data sources:
 - video recordings (for testing and extracting still images) from a personal Ring device collected using DataCollection.ipynb ;
@@ -127,19 +127,23 @@ Please see examples of the results in  https://github.com/nweakly/MSDSProject-II
 Note: darkflow also allows using information about different checkpoints generated during training to produce predictions. In many cases it is useful to compare results at the different stages, however, checkpoint files are not included in this repository due to space restrictions.
 
 ## Conclusions
-- YOLOv2 model is not very accurate in predicting smaller objects
-- quality of the training data maters a lot
-- prediction of non-existing objects in previousely seen locations and non-detecting objects in unseen locations
-- YOLO is ot very accurate when objects are partically hidden => more training data needs to reflect that
+- YOLOv2  and YOLOv2-tiny are very fast models capable of processing real-time video stream and providing reliable detection results for large objects with an unobstructed view;
+- detection accuracy decreases for smaller objects and partially visible (obstructed view objects);
+- it is possible to create custom -built object detection systems for video surveillance using the YOLOv2 model and its tiny modification as demonstrated by the Ring example;
+ - however, increasing accuracy would require a more thorough training process and better training dataset (training exclusively on images collected from the internet resulted in prediction confidence of only 2-5%; using many still images extracted from the Ring videos resulted in an overfitted model which was "detecting" non-existing crowbars in the locations previously seen on training photos and not detecting objects in the previously unseen locations; combining training sets yielded the best results);
+- while labeling the training images, I did not specify if a bounding box included a whole crowbar or its partial image, as a result, parts of the same crowbar in test videos were occasionally detected as two separate objects;
+- YOLO algorithm can be used in video security systems to trigger an alarm in case of a particular event but detecting small objects and tracking the same object from frame to the frame would require using different approaches;
+ - training a custom deep learning model is not only science but an art requiring a lot of patience as well. While working on this project, I experimented with training six different models (different training sets, size of training images,  learning rates, number of epochs, batch sizes) with the longest training process running on GeForce RTX 2070 GPU for 46 hours and the results could not easily be predicted in advance.
 
 ## References
-Video presentation for this project: 
+- Video presentation for this project: 
+
 - Darklow library (Darknet translated to TensorFlow) https://github.com/thtrieu/darkflow
-- Official site for the Darknet project https://pjreddie.com/darknet/yolo/ . Use to download configuration and pretrained wights files.
+- Darknet framework https://github.com/pjreddie/darknet
+- Darknet project site:  https://pjreddie.com/darknet/yolo/ . Use to download configuration and pretrained wights files.
 - Jay, M. Series of YOLO tutorials: https://www.youtube.com/watch?v=PyjBd7IDYZs&list=PLX-LrBk6h3wSGvuTnxB2Kj358XfctL4BM&index=1 and 
 https://github.com/markjay4k/YOLO-series 
 - Instructions for setting up YOLO using Anaconda and Windows https://expschoolwork.blogspot.com/2018/11/using-yolo-in-anaconda.html
+- Redmon, J., Divvala, S., Girshick, R., Farhadi, A. (2016). You Only Look Once: unified, real-time object detection. Retrieved from:  https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf 
 
-Redmon, J., Divvala, S., Girshick, R., Farhadi, A. (2016). You Only Look Once: unified, real-time object detection. Retrieved from:  https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf 
 
-Darknet framework https://github.com/pjreddie/darknet

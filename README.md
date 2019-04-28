@@ -45,9 +45,10 @@ Since the detection speed is a very important factor in processing security vide
 A test example of YOLOv2 pretrrained model applied to a static image can be found at https://github.com/nweakly/MSDSProject-II/blob/master/YOLO_Model_Test.ipynb which successfully with 68.4% confidence identified a cat in the picture. 
 
 Using YOLOv2 for predictions is easier accomplished through the command line interface, for example using the following command:
-'''
+
+```
 python flow --model cfg/yolov2.cfg --load bin/yolov2.weights --demo videofile.avi  --gpu 1.0 --saveVideo
-'''
+```
 
 ### Training a New Model on a Custom Data Set
 Transfer learning approach:

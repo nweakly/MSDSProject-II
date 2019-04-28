@@ -42,16 +42,19 @@ The resulting set of training crowbar images collected from all sources and augm
 ### Fitting a pre-trained model
 Since the detection speed is a very important factor in processing security videos, among all available CNN approaches  I chose to use a one-stage detector model, namely the YOLO ("You Only look Once") model originally introduced in 2016 in the paper written by Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi.  The updated YOLOv2 algorithm was translated to Tensorflow by Trieu H. Trinh and is available as an open source darkflow package (https://github.com/thtrieu/darkflow). 
 
+A test example of YOLOv2 pretrrained model applied to a static image can be found at https://github.com/nweakly/MSDSProject-II/blob/master/YOLO_Model_Test.ipynb which successfully with 68.4% confidence identified a cat in the picture. 
 
-
-
-esting oon still images
-testing on video
+Using YOLOv2 for predictions is easier accomplished through the command line interface, for example using the following command:
+'''
+python flow --model cfg/yolov2.cfg --load bin/yolov2.weights --demo videofile.avi  --gpu 1.0 --saveVideo
+'''
 
 ### Training a New Model on a Custom Data Set
 Transfer learning approach:
 1. chose a pre-traines model
-2. change configurations to fit a particular situations
+2. change configurations to fit a particular situationsUsing YOLOv2 for predictions is easier accomplished through the command line interface, for example using the following command:
+
+
 3. build the model
 4. train the model
 training is more effective in command-line mode

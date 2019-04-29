@@ -40,7 +40,7 @@ The original video recordings from the Ring device have frame size 1920x1080 pix
 The resulting set of training crowbar images collected from all sources and augmentation techniques applied includes 554 total images.
 
 ### Fitting a pre-trained model
-Since the detection speed is a very important factor in processing security videos, among all available CNN approaches  I chose to use a one-stage detector model, namely the __YOLO ("You Only look Once") model__ originally introduced in 2016 in the paper written by Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi.  The updated YOLOv2 algorithm was translated to Tensorflow by Trieu H. Trinh and is available as an open source __darkflow package__ (https://github.com/thtrieu/darkflow). 
+Since the detection speed is a very important factor in processing security videos, among all available CNN approaches  I chose to use a one-stage detector model, namely the __YOLO ("You Only look Once") model__ originally introduced in 2015 in the paper written by Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi.  The updated YOLOv2 algorithm was translated to Tensorflow by Trieu H. Trinh and is available as an open source __darkflow package__ (https://github.com/thtrieu/darkflow). 
 
 A test example of YOLOv2 pretrained model applied to a static image can be found at https://github.com/nweakly/MSDSProject-II/blob/master/YOLO_Model_Test.ipynb which successfully with 68.4% confidence identified a cat in the picture. 
 
@@ -144,6 +144,7 @@ Note: darkflow also allows using information about different checkpoints generat
 - Jay, M. Series of YOLO tutorials: https://www.youtube.com/watch?v=PyjBd7IDYZs&list=PLX-LrBk6h3wSGvuTnxB2Kj358XfctL4BM&index=1 and 
 https://github.com/markjay4k/YOLO-series 
 - Instructions for setting up YOLO using Anaconda and Windows https://expschoolwork.blogspot.com/2018/11/using-yolo-in-anaconda.html
-- Redmon, J., Divvala, S., Girshick, R., Farhadi, A. (2016). You Only Look Once: unified, real-time object detection. Retrieved from:  https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf 
+- Redmon, J., Divvala, S., Girshick, R., Farhadi, A. (2015). You Only Look Once: unified, real-time object detection. Retrieved from:  https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf
+- Redmon, J., Farhadi, A. (2016). YOLO9 000: Better, Faster, Stronger. Retrieved from https://arxiv.org/pdf/1612.08242v1.pdf
 
 

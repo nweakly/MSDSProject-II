@@ -21,7 +21,7 @@ For a more detailed explanation of the project please watch the video presentati
 - Darkflow - package translating Darknet to TensorFlow
 - cfg (configuration) and weights files for the YOLO model downloaded from https://pjreddie.com/darknet/yolo/
 - highly recommended - a separate conda virtual environment (to resolve version conflicts for the deep learning libraries) and use Anaconda for installations
-- GPU GeForce RTX 2070 used during model raining process, GeForce GTX1050 for all other file processing.
+- GPU GeForce RTX 2070 used during model training process, GeForce GTX1050 for all other file processing.
 
 For detailed installation instructions please refere to a post by Abhijeet Kumar (https://appliedmachinelearning.blog/2018/05/27/running-yolo-v2-for-real-time-object-detection-on-videos-images-via-darkflow/ ) or https://expschoolwork.blogspot.com/2018/11/using-yolo-in-anaconda.html .
 

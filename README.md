@@ -135,7 +135,7 @@ Note: darkflow also allows using information about different checkpoints generat
 - YOLO algorithm can be used in video security systems to trigger an alarm in case of a particular event but detecting small objects and tracking the same object from frame to the frame would require using different approaches;
  - training a custom deep learning model is not only science but an art requiring a lot of patience as well. While working on this project, I experimented with training six different models (different training sets, size of training images,  learning rates, number of epochs, batch sizes) with the longest training process running on GeForce RTX 2070 GPU for 46 hours and the results could not easily be predicted in advance.
 
-## References
+## References and Links
 - Video presentation for this project: 
 
 - Darklow library (Darknet translated to TensorFlow) https://github.com/thtrieu/darkflow

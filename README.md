@@ -7,8 +7,8 @@
 The goal of this project is to conduct a feasibility study of applying deep learning techniques for detecting and labeling objects in the video recordings of the home security systems, such as the Ring doorbell, in order to be able to eventually build a customizable home security system. There are many potential scenarios where a custom-tuned home security system could be useful, for example, to notify homeowners that their mail and packages have been delivered, to combat so-called “porch pirates”, to detect undesirable activity nearby (e.g., people displaying guns) or to let parents know that their children safely returned home after taking their family dog for a walk. 
 
 The Ring doorbell records video clips when detecting motion within a predetermined perimeter. However, this motion sensor can be triggered not only by humans walking up to the door, but by wild and domestic animals, passing vehicles, etc. So, the first step of this project is using an algorithm capable of processing video feed in real (or near real) time to identify and classify objects, and then training the model to identify additional context-dependent objects in the video recordings (video feed).
-
-For a more detailed explanation of the project please watch the video presentation. It contains a description of the project some practical suggestions and lessons learned while working on this project.
+ 
+For a more detailed explanation of the project please watch the video presentation https://www.youtube.com/watch?v=B24XlEfF-u4 . It contains a description of the project, some practical suggestions and lessons learned while working on this project.
 
 ## Technical Requirements and Dependencies
 - Anaconda package (64-bit version) on Windows 10
@@ -137,7 +137,7 @@ Note: darkflow also allows using information about different checkpoints generat
  - Training a custom deep learning model is not only science but it can also feel as an art requiring a lot of patience and experience as well. While working on this project, I experimented with training six different models (different training sets, size of training images,  learning rates, number of epochs, batch sizes) with the longest training process running on GeForce RTX 2070 GPU for 46 hours and the results could not easily be predicted in advance.
 
 ## References and Links
-- Video presentation for this project: 
+- Video presentation for this project: https://www.youtube.com/watch?v=B24XlEfF-u4
 
 - Darklow library (Darknet translated to TensorFlow) https://github.com/thtrieu/darkflow
 - Darknet framework https://github.com/pjreddie/darknet

@@ -139,7 +139,7 @@ Note: darkflow also allows using information about different checkpoints generat
 ## References and Links
 - Video presentation for this project: https://www.youtube.com/watch?v=B24XlEfF-u4
 
-- Darklow library (Darknet translated to TensorFlow) https://github.com/thtrieu/darkflow
+- Darkflow library (Darknet translated to TensorFlow) https://github.com/thtrieu/darkflow
 - Darknet framework https://github.com/pjreddie/darknet
 - Darknet project site:  https://pjreddie.com/darknet/yolo/ . Use to download configuration and pretrained weights files.
 - Jay, M. Series of YOLO tutorials: https://www.youtube.com/watch?v=PyjBd7IDYZs&list=PLX-LrBk6h3wSGvuTnxB2Kj358XfctL4BM&index=1 and 
